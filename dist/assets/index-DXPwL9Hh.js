@@ -1,5 +1,5 @@
 const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./files-C0qTJspE.js","./editor.api-C-xGocuI.js","./preload-helper-Ct5FWWRu.js","./editor-CP2cXDiA.css","./monaco.contribution-z6V7X9uP.js","./files-oVf4fuzy.css"])))=>i.map(i=>d[i]);
-import{s as h,t as O,m as I}from"./files-C0qTJspE.js";import{L as M}from"./core-qH_pqHwH-C9_6Qe8-.js";import{_ as Z}from"./preload-helper-Ct5FWWRu.js";import{e as B,K as F,a as A}from"./editor.api-C-xGocuI.js";import"./monaco.contribution-z6V7X9uP.js";(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))d(c);new MutationObserver(c=>{for(const p of c)if(p.type==="childList")for(const g of p.addedNodes)g.tagName==="LINK"&&g.rel==="modulepreload"&&d(g)}).observe(document,{childList:!0,subtree:!0});function i(c){const p={};return c.integrity&&(p.integrity=c.integrity),c.referrerPolicy&&(p.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?p.credentials="include":c.crossOrigin==="anonymous"?p.credentials="omit":p.credentials="same-origin",p}function d(c){if(c.ep)return;c.ep=!0;const p=i(c);fetch(c.href,p)}})();let b=null,N={out(){},err(){}};const E="/home/pyodide",ee=`
+import{s as g,t as O,m as H}from"./files-C0qTJspE.js";import{L as M}from"./core-qH_pqHwH-C9_6Qe8-.js";import{_ as Z}from"./preload-helper-Ct5FWWRu.js";import{e as N,K as F,a as A}from"./editor.api-C-xGocuI.js";import"./monaco.contribution-z6V7X9uP.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))d(c);new MutationObserver(c=>{for(const p of c)if(p.type==="childList")for(const h of p.addedNodes)h.tagName==="LINK"&&h.rel==="modulepreload"&&d(h)}).observe(document,{childList:!0,subtree:!0});function o(c){const p={};return c.integrity&&(p.integrity=c.integrity),c.referrerPolicy&&(p.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?p.credentials="include":c.crossOrigin==="anonymous"?p.credentials="omit":p.credentials="same-origin",p}function d(c){if(c.ep)return;c.ep=!0;const p=o(c);fetch(c.href,p)}})();let b=null,B={out(){},err(){}};const z="/home/pyodide",nn=`
 import ast, sys
 __nb_out__ = None
 def _nb_prep(code):
@@ -23,17 +23,17 @@ def _nb_reset():
     for k in list(globals()):
         if not k.startswith('__') and k not in keep:
             del globals()[k]
-    for m in [m for m, v in sys.modules.items() if str(getattr(v, '__file__', '') or '').startswith('${E}/')]:
+    for m in [m for m, v in sys.modules.items() if str(getattr(v, '__file__', '') or '').startswith('${z}/')]:
         del sys.modules[m]
-`,H=new Promise(t=>{const n=d=>{b=d.interpreter,b.setStdout({batched:c=>N.out(c+`
-`)}),b.setStderr({batched:c=>N.err(c+`
-`)}),b.setStdin({stdin:()=>prompt("Python 輸入：")??""}),b.runPython(ee),t()},i=M.main.onReady;typeof i?.add=="function"?i.add(n):M.main.onReady=n});let $=new Set;function X(){const t=h.state.files;for(const n of $)if(!(n in t))try{b.FS.unlink(`${E}/${n}`)}catch{}$=new Set;for(const[n,i]of Object.entries(t)){const d=`${E}/${n}`;try{b.FS.mkdirTree(d.slice(0,d.lastIndexOf("/")))}catch{}b.FS.writeFile(d,i),$.add(n)}b.runPython(`import sys, os, importlib
-os.chdir("${E}")
-if "${E}" not in sys.path: sys.path.insert(0, "${E}")
-importlib.invalidate_caches()`)}function G(){for(const t of Object.keys(h.state.files))try{h.update(t,b.FS.readFile(`${E}/${t}`,{encoding:"utf8"}))}catch{}}function U(t){const n=String(t.message??t).trimEnd(),i=n.indexOf('File "<exec>"');return(i>0?`Traceback (most recent call last):
-  `+n.slice(i):n)+`
-`}const K=()=>b.runPython("_nb_reset()");async function W(t,n){N=n;try{X(),await b.loadPackagesFromImports(t),await b.runPythonAsync(b.globals.get("_nb_prep")(t));const i=b.globals.get("_nb_show")();i!=null&&n.out(i+`
-`,"res")}catch(i){n.err(U(i))}finally{G()}}async function ne(t,n,i){N=i;try{K(),X(),await b.loadPackagesFromImports(t),await b.runPythonAsync(t,{filename:`${E}/${n}`})}catch(d){i.err(U(d))}finally{G()}}const te=`小貓坐在桌上
+`,X=new Promise(t=>{const e=d=>{b=d.interpreter,b.setStdout({batched:c=>B.out(c+`
+`)}),b.setStderr({batched:c=>B.err(c+`
+`)}),b.setStdin({stdin:()=>prompt("Python 輸入：")??""}),b.runPython(nn),t()},o=M.main.onReady;typeof o?.add=="function"?o.add(e):M.main.onReady=e});let $=new Set;function V(){const t=g.state.files;for(const e of $)if(!(e in t))try{b.FS.unlink(`${z}/${e}`)}catch{}$=new Set;for(const[e,o]of Object.entries(t)){const d=`${z}/${e}`;try{b.FS.mkdirTree(d.slice(0,d.lastIndexOf("/")))}catch{}b.FS.writeFile(d,o),$.add(e)}b.runPython(`import sys, os, importlib
+os.chdir("${z}")
+if "${z}" not in sys.path: sys.path.insert(0, "${z}")
+importlib.invalidate_caches()`)}function G(){for(const t of Object.keys(g.state.files))try{g.update(t,b.FS.readFile(`${z}/${t}`,{encoding:"utf8"}))}catch{}}function U(t){const e=String(t.message??t).trimEnd(),o=e.indexOf('File "<exec>"');return(o>0?`Traceback (most recent call last):
+  `+e.slice(o):e)+`
+`}const K=()=>b.runPython("_nb_reset()");async function W(t,e){B=e;try{V(),await b.loadPackagesFromImports(t),await b.runPythonAsync(b.globals.get("_nb_prep")(t));const o=b.globals.get("_nb_show")();o!=null&&e.out(o+`
+`,"res")}catch(o){e.err(U(o))}finally{G()}}async function en(t,e,o){B=o;try{K(),V(),await b.loadPackagesFromImports(t),await b.runPythonAsync(t,{filename:`${z}/${e}`})}catch(d){o.err(U(d))}finally{G()}}const tn=`小貓坐在桌上
 小狗跑在路上
 小鳥飛在天上
 小魚游在水中
@@ -180,7 +180,7 @@ importlib.invalidate_caches()`)}function G(){for(const t of Object.keys(h.state.
 我今天很開心
 你今天很開心
 他今天很開心
-`,ae=`"""
+`,an=`"""
 The most atomic way to train and run inference for a GPT in pure, dependency-free Python.
 This file is the complete algorithm.
 Everything else is just efficiency.
@@ -386,7 +386,7 @@ for sample_idx in range(20):
             break
         sample.append(uchars[token_id])
     print(f"sample {sample_idx+1:2d}: {''.join(sample)}")
-`,se=`# Matplotlib Demo: Line Plot, Histogram, Scatter Plot
+`,sn=`# Matplotlib Demo: Line Plot, Histogram, Scatter Plot
 # Uses agg backend → PNG → base64 → DOM injection (works in Pyodide/PyScript)
 import numpy as np
 import matplotlib
@@ -506,7 +506,154 @@ document.body.appendChild(modal)
 close_btn.focus()
 
 print('圖表已在浮現視窗中開啟。')
-`,re=`"""使用 NumPy tensor 版 nn 訓練字元級 GPT；請由範例庫載入。"""
+`,on=`小貓坐在桌上
+小狗跑在路上
+小鳥飛在天上
+小魚游在水中
+大貓坐在地上
+大狗跑在地上
+大鳥飛在山上
+小貓吃了魚
+小狗吃了肉
+小鳥吃了蟲
+小魚吃了草
+大貓吃了魚
+大狗吃了肉
+大鳥吃了蟲
+我看到一隻小貓
+我看到一隻小狗
+我看到一隻小鳥
+我看到一隻小魚
+你看到一隻大貓
+你看到一隻大狗
+你看到一隻大鳥
+他看到一隻大魚
+我喜歡小貓
+我喜歡小狗
+我喜歡小鳥
+你喜歡大貓
+你喜歡大狗
+他喜歡小魚
+她喜歡大鳥
+天上有白雲
+天上有太陽
+天上有月亮
+天上有星星
+山上有大樹
+山上有小花
+山上有小草
+水中有小魚
+水中有大魚
+地上有小貓
+地上有大狗
+今天天氣好
+今天太陽大
+今天風很大
+今天雨很大
+小貓很可愛
+小狗很可愛
+小鳥很可愛
+大貓很漂亮
+大狗很漂亮
+大鳥很漂亮
+我去學校上課
+你去學校上課
+他去學校上課
+她去學校上課
+我在家裡吃飯
+你在家裡吃飯
+他在家裡看書
+她在家裡看書
+我和你是好朋友
+你和他是好朋友
+他和她是好朋友
+我們都是好朋友
+早上太陽出來了
+中午太陽很大
+下午風很大
+晚上月亮出來了
+晚上星星很多
+小花很漂亮
+小草很多
+大樹很高
+白雲很白
+太陽很大
+月亮很亮
+星星很小
+我愛吃飯
+你愛看書
+他愛跑步
+她愛唱歌
+我會寫字
+你會看書
+他會跑步
+她會唱歌
+我想吃魚
+你想吃肉
+他想看書
+她想唱歌
+一隻小貓在桌上
+一隻小狗在地上
+一隻小鳥在天上
+一隻小魚在水中
+兩隻小貓在地上
+兩隻小狗在路上
+三隻小鳥在天上
+很多小魚在水中
+春天小花很多
+夏天太陽很大
+秋天風很大
+冬天雨很大
+春天很美
+夏天很熱
+秋天很涼
+冬天很冷
+我在春天看花
+你在夏天游水
+他在秋天看書
+她在冬天唱歌
+小貓和小狗是好朋友
+小鳥和小魚是好朋友
+大貓和大狗是好朋友
+我和小貓是好朋友
+你和小狗是好朋友
+他喜歡在山上跑步
+她喜歡在水中游水
+我喜歡在家裡看書
+你喜歡在學校上課
+天上的白雲很漂亮
+山上的大樹很高
+水中的小魚很可愛
+地上的小花很美
+早上我去學校上課
+中午我在學校吃飯
+下午我在家裡看書
+晚上我在家裡吃飯
+早上你去學校上課
+中午你在學校吃飯
+下午你在家裡看書
+晚上你在家裡吃飯
+小貓在家裡
+小狗在路上
+小鳥在山上
+小魚在水中
+大樹在山上
+小花在地上
+太陽在天上
+月亮在天上
+星星在天上
+白雲在天上
+我很開心
+你很開心
+他很開心
+她很開心
+我們很開心
+大家都很開心
+今天很開心
+我今天很開心
+你今天很開心
+他今天很開心
+`,rn=`"""使用 NumPy tensor 版 nn 訓練字元級 GPT；請由範例庫載入。"""
 
 import asyncio
 import os
@@ -556,7 +703,7 @@ for sample_index in range(12):
         sample.append(chars[token_id])
         token_ids.append(token_id)
     print(f'{sample_index + 1:2d}. {"".join(sample)}')
-`,ie=`"""NumPy tensor 版的極簡 GPT：手寫矩陣反向傳播，不建立純量運算圖。"""
+`,ln=`"""NumPy tensor 版的極簡 GPT：手寫矩陣反向傳播，不建立純量運算圖。"""
 
 import numpy as np
 
@@ -675,251 +822,7 @@ class GPT:
         np.add.at(gradients['wte'], token_ids, d_x)
         gradients['wpe'][:length] += d_x
         return float(loss), gradients
-`,oe=`"""用 nn 小型套件訓練字元級 GPT；請和 nn.py、input.txt 一起載入。"""
-
-import asyncio
-import os
-import random
-import nn
-
-random.seed(42)
-
-if not os.path.exists('input.txt'):
-    raise FileNotFoundError('找不到 input.txt；請從範例庫載入 nn-gpt.py。')
-
-docs = [line.strip() for line in open('input.txt', encoding='utf-8') if line.strip()]
-random.shuffle(docs)
-chars = sorted(set(''.join(docs)))
-token_of = {char: index for index, char in enumerate(chars)}
-BOS = len(chars)
-vocab_size = BOS + 1
-block_size = 16
-
-print(f'訓練資料：{len(docs)} 行，詞彙表：{vocab_size} 個字元')
-model = nn.GPT(vocab_size, block_size, width=12, layers=1, heads=3)
-optimizer = nn.Adam(model.parameters())
-print(f'模型參數：{len(model.parameters())}')
-
-num_steps = 200
-for step in range(num_steps):
-    doc = docs[step % len(docs)]
-    tokens = [BOS] + [token_of[char] for char in doc] + [BOS]
-    length = min(block_size, len(tokens) - 1)
-    keys = [[] for _ in model.blocks]
-    values = [[] for _ in model.blocks]
-    losses = []
-
-    for position in range(length):
-        logits = model(tokens[position], position, keys, values)
-        probabilities = nn.softmax(logits)
-        losses.append(-probabilities[tokens[position + 1]].log())
-
-    loss = sum(losses) / length
-    loss.backward()
-    optimizer.step(0.01 * (1 - step / num_steps))
-
-    if step == 0 or (step + 1) % 50 == 0:
-        print(f'步驟 {step + 1:3d} / {num_steps}，損失 {loss.data:.4f}')
-    if step % 5 == 0:
-        await asyncio.sleep(0)  # 瀏覽器中讓出控制權，保持介面可更新。
-
-print('\\n--- 生成的句子 ---')
-for sample_index in range(12):
-    keys = [[] for _ in model.blocks]
-    values = [[] for _ in model.blocks]
-    token_id, sample = BOS, []
-    for position in range(block_size):
-        logits = model(token_id, position, keys, values)
-        probabilities = nn.softmax([logit / 0.6 for logit in logits])
-        token_id = random.choices(range(vocab_size), weights=[item.data for item in probabilities])[0]
-        if token_id == BOS:
-            break
-        sample.append(chars[token_id])
-    print(f'{sample_index + 1:2d}. {"".join(sample)}')
-`,le=`"""小型神經網路套件：純 Python 自動微分、Transformer 與 Adam。"""
-
-import math
-import random
-
-
-class Value:
-    """可建立運算圖、並以反向傳播累積梯度的純量。"""
-
-    __slots__ = ('data', 'grad', '_children', '_local_grads')
-
-    def __init__(self, data, children=(), local_grads=()):
-        self.data = data
-        self.grad = 0.0
-        self._children = children
-        self._local_grads = local_grads
-
-    def __add__(self, other):
-        other = other if isinstance(other, Value) else Value(other)
-        return Value(self.data + other.data, (self, other), (1.0, 1.0))
-
-    def __mul__(self, other):
-        other = other if isinstance(other, Value) else Value(other)
-        return Value(self.data * other.data, (self, other), (other.data, self.data))
-
-    def __pow__(self, power):
-        return Value(self.data ** power, (self,), (power * self.data ** (power - 1),))
-
-    def log(self):
-        return Value(math.log(self.data), (self,), (1 / self.data,))
-
-    def exp(self):
-        result = math.exp(self.data)
-        return Value(result, (self,), (result,))
-
-    def relu(self):
-        return Value(max(0.0, self.data), (self,), (float(self.data > 0),))
-
-    def __neg__(self): return self * -1
-    def __radd__(self, other): return self + other
-    def __sub__(self, other): return self + (-other)
-    def __rsub__(self, other): return other + (-self)
-    def __rmul__(self, other): return self * other
-    def __truediv__(self, other): return self * other ** -1
-    def __rtruediv__(self, other): return other * self ** -1
-
-    def backward(self):
-        order, visited = [], set()
-
-        def visit(node):
-            if node not in visited:
-                visited.add(node)
-                for child in node._children:
-                    visit(child)
-                order.append(node)
-
-        visit(self)
-        self.grad = 1.0
-        for node in reversed(order):
-            for child, local_grad in zip(node._children, node._local_grads):
-                child.grad += local_grad * node.grad
-
-
-def _matrix(rows, cols, std=0.08):
-    return [[Value(random.gauss(0, std)) for _ in range(cols)] for _ in range(rows)]
-
-
-def _parameters(matrix):
-    return [parameter for row in matrix for parameter in row]
-
-
-def softmax(logits):
-    maximum = max(value.data for value in logits)
-    exps = [(value - maximum).exp() for value in logits]
-    total = sum(exps)
-    return [value / total for value in exps]
-
-
-class Embedding:
-    def __init__(self, count, width):
-        self.weight = _matrix(count, width)
-
-    def __call__(self, index):
-        return self.weight[index]
-
-    def parameters(self):
-        return _parameters(self.weight)
-
-
-class Linear:
-    def __init__(self, inputs, outputs):
-        self.weight = _matrix(outputs, inputs)
-
-    def __call__(self, vector):
-        return [sum(weight * value for weight, value in zip(row, vector)) for row in self.weight]
-
-    def parameters(self):
-        return _parameters(self.weight)
-
-
-def rmsnorm(vector):
-    mean_square = sum(value * value for value in vector) / len(vector)
-    scale = (mean_square + 1e-5) ** -0.5
-    return [value * scale for value in vector]
-
-
-class TransformerBlock:
-    """沒有偏置、採 RMSNorm 與 ReLU 的極簡 GPT 區塊。"""
-
-    def __init__(self, width, heads):
-        if width % heads:
-            raise ValueError('width 必須可被 heads 整除')
-        self.heads = heads
-        self.head_width = width // heads
-        self.query = Linear(width, width)
-        self.key = Linear(width, width)
-        self.value = Linear(width, width)
-        self.output = Linear(width, width)
-        self.fc1 = Linear(width, 4 * width)
-        self.fc2 = Linear(4 * width, width)
-
-    def __call__(self, vector, keys, values):
-        residual = vector
-        normalized = rmsnorm(vector)
-        query = self.query(normalized)
-        keys.append(self.key(normalized))
-        values.append(self.value(normalized))
-        attended = []
-        for head in range(self.heads):
-            start = head * self.head_width
-            stop = start + self.head_width
-            q = query[start:stop]
-            k = [item[start:stop] for item in keys]
-            v = [item[start:stop] for item in values]
-            scores = [sum(q[i] * key[i] for i in range(self.head_width)) / self.head_width ** 0.5 for key in k]
-            weights = softmax(scores)
-            attended.extend(sum(weights[t] * v[t][i] for t in range(len(v))) for i in range(self.head_width))
-        vector = [left + right for left, right in zip(self.output(attended), residual)]
-        residual = vector
-        vector = [value.relu() for value in self.fc1(rmsnorm(vector))]
-        return [left + right for left, right in zip(self.fc2(vector), residual)]
-
-    def parameters(self):
-        return sum((layer.parameters() for layer in (self.query, self.key, self.value, self.output, self.fc1, self.fc2)), [])
-
-
-class GPT:
-    def __init__(self, vocab_size, block_size, width=12, layers=1, heads=3):
-        self.token_embedding = Embedding(vocab_size, width)
-        self.position_embedding = Embedding(block_size, width)
-        self.blocks = [TransformerBlock(width, heads) for _ in range(layers)]
-        self.language_head = Linear(width, vocab_size)
-
-    def __call__(self, token_id, position_id, keys, values):
-        vector = [token + position for token, position in zip(
-            self.token_embedding(token_id), self.position_embedding(position_id))]
-        vector = rmsnorm(vector)
-        for block, layer_keys, layer_values in zip(self.blocks, keys, values):
-            vector = block(vector, layer_keys, layer_values)
-        return self.language_head(vector)
-
-    def parameters(self):
-        return (self.token_embedding.parameters() + self.position_embedding.parameters() +
-                sum((block.parameters() for block in self.blocks), []) + self.language_head.parameters())
-
-
-class Adam:
-    def __init__(self, parameters, beta1=0.85, beta2=0.99, epsilon=1e-8):
-        self.parameters = parameters
-        self.beta1, self.beta2, self.epsilon = beta1, beta2, epsilon
-        self.first = [0.0] * len(parameters)
-        self.second = [0.0] * len(parameters)
-        self.steps = 0
-
-    def step(self, learning_rate):
-        self.steps += 1
-        for i, parameter in enumerate(self.parameters):
-            self.first[i] = self.beta1 * self.first[i] + (1 - self.beta1) * parameter.grad
-            self.second[i] = self.beta2 * self.second[i] + (1 - self.beta2) * parameter.grad ** 2
-            first = self.first[i] / (1 - self.beta1 ** self.steps)
-            second = self.second[i] / (1 - self.beta2 ** self.steps)
-            parameter.data -= learning_rate * first / (second ** 0.5 + self.epsilon)
-            parameter.grad = 0.0
-`,de=`# NumPy Basics: Array operations, linear algebra, random numbers
+`,dn=`# NumPy Basics: Array operations, linear algebra, random numbers
 import numpy as np
 
 # Create arrays
@@ -959,7 +862,7 @@ row = np.arange(3)               # shape (3,)
 col = np.arange(4).reshape(4, 1) # shape (4,1)
 grid = row + col
 print("\\nbroadcast add (shape 3 + 4x1):\\n", grid)
-`,ce=`# Pandas Basics: DataFrame creation, filtering, groupby, pivot
+`,cn=`# Pandas Basics: DataFrame creation, filtering, groupby, pivot
 import pandas as pd
 import numpy as np
 
@@ -1003,7 +906,7 @@ print(df["grade"].value_counts().sort_index())
 print("\\n=== Students per grade per class (pivot) ===")
 pivot = pd.crosstab(df["class"], df["grade"])
 print(pivot)
-`,pe=`# SciPy Demo: Numerical integration, optimization, signal filtering, t-test
+`,pn=`# SciPy Demo: Numerical integration, optimization, signal filtering, t-test
 import numpy as np
 from scipy import integrate, optimize, signal, stats
 
@@ -1054,7 +957,7 @@ t_stat, p_val = stats.ttest_ind(groupA, groupB)
 print(f"  Group A mean: {groupA.mean():.2f}   Group B mean: {groupB.mean():.2f}")
 print(f"  t = {t_stat:.4f},  p = {p_val:.4f}")
 print(f"  => {'Significant difference (p < 0.05)' if p_val < 0.05 else 'No significant difference (p >= 0.05)'}")
-`,fe=`# Scikit-learn: Iris classification (KNN + Decision Tree) + Linear Regression
+`,mn=`# Scikit-learn: Iris classification (KNN + Decision Tree) + Linear Regression
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -1118,14 +1021,14 @@ print(f"  R² = {r2:.4f},  RMSE = {rmse:.2f}")
 print(f"  First 5 predictions vs actual:")
 for p, a in zip(yd_pred[:5], yd_te[:5]):
     print(f"    pred {p:6.1f}   actual {a:6.1f}")
-`,me=Object.assign({"./examples/ai/input.txt":te,"./examples/ai/microgpt.py":ae,"./examples/matplotlib/matplotlib_plot.py":se,"./examples/nn-numpy/nn-gpt.py":re,"./examples/nn-numpy/nn.py":ie,"./examples/nn/nn-gpt.py":oe,"./examples/nn/nn.py":le,"./examples/numpy/numpy_basic.py":de,"./examples/pandas/pandas_basic.py":ce,"./examples/scipy/scipy_demo.py":pe,"./examples/sklearn/sklearn_iris.py":fe}),J=Object.fromEntries(Object.entries(me).map(([t,n])=>[t.replace("./examples/",""),n])),ue={"ai/microgpt.py":["ai/microgpt.py","ai/input.txt"],"nn/nn-gpt.py":["nn/nn-gpt.py","nn/nn.py","ai/input.txt"],"nn-numpy/nn-gpt.py":["nn-numpy/nn-gpt.py","nn-numpy/nn.py","ai/input.txt"]};function D(t){const n=ue[t]??[t];return Object.fromEntries(n.map(i=>[i.slice(i.lastIndexOf("/")+1),J[i]]))}function _e(){const t={};for(const[n,i]of Object.entries(J)){const d=n.indexOf("/");if(d===-1)t[""]??={},t[""][n]=i;else{const c=n.slice(0,d),p=n.slice(d+1);t[c]??={},t[c][p]=i}}return t}const he={ai:"🤖",nn:"🧠","nn-numpy":"⚡",numpy:"🔢",pandas:"🐼",matplotlib:"📊",scipy:"🔬",sklearn:"🧠"},ge=t=>he[t]??"📁",j=t=>t.endsWith(".py")?"🐍":"📄";function Y(t,{onOpen:n,isActive:i}){t.innerHTML=`<div class="side-h"><span>檔案總管</span><span>
+`,fn=Object.assign({"./examples/ai/input.txt":tn,"./examples/ai/microgpt.py":an,"./examples/matplotlib/matplotlib_plot.py":sn,"./examples/nn-numpy/input.txt":on,"./examples/nn-numpy/nn-gpt.py":rn,"./examples/nn-numpy/nn.py":ln,"./examples/numpy/numpy_basic.py":dn,"./examples/pandas/pandas_basic.py":cn,"./examples/scipy/scipy_demo.py":pn,"./examples/sklearn/sklearn_iris.py":mn}),J=Object.fromEntries(Object.entries(fn).map(([t,e])=>[t.replace("./examples/",""),e])),un={"ai/microgpt.py":["ai/microgpt.py","ai/input.txt"],"nn-numpy/nn-gpt.py":["nn-numpy/nn-gpt.py","nn-numpy/nn.py","nn-numpy/input.txt"]};function D(t){const e=un[t]??[t];return Object.fromEntries(e.map(o=>[o.slice(o.lastIndexOf("/")+1),J[o]]))}function _n(){const t={};for(const[e,o]of Object.entries(J)){const d=e.indexOf("/");if(d===-1)t[""]??={},t[""][e]=o;else{const c=e.slice(0,d),p=e.slice(d+1);t[c]??={},t[c][p]=o}}return t}const gn={ai:"🤖","nn-numpy":"⚡",numpy:"🔢",pandas:"🐼",matplotlib:"📊",scipy:"🔬",sklearn:"🧠"},hn=t=>gn[t]??"📁",j=t=>t.endsWith(".py")?"🐍":"📄";function Y(t,{onOpen:e,isActive:o}){t.innerHTML=`<div class="side-h"><span>檔案總管</span><span>
     <button data-a="new" title="新增檔案">＋</button><button data-a="up" title="上傳檔案">⬆</button></span></div>
     <div class="flist"></div>
     <div class="ex-section">
       <div class="ex-hdr" id="ex-toggle"><span class="ex-arrow">▶</span><span>📚 範例庫</span></div>
       <div class="ex-tree" hidden></div>
     </div>
-    <input type="file" multiple hidden>`;const d=t.querySelector(".flist"),c=t.querySelector("#ex-toggle"),p=t.querySelector(".ex-tree"),g=t.querySelector("input[type=file]");let y=null,w=!1;function S(a,e){const s=document.createElement("div");s.className="file editing";const r=document.createElement("input");r.value=a,r.spellcheck=!1;const o=document.createElement("div");o.className="msg",s.append(r,o);let f=!1;const _=v=>{if(f)return;const C=r.value.trim();if(!C||C===a){f=!0,y=null,u();return}const q=y;y=null;try{e(C),f=!0,u()}catch(T){v?(y=q,r.classList.add("bad"),o.textContent=T.message,r.focus()):(f=!0,u())}};return r.onkeydown=v=>{v.key==="Enter"&&_(!0),v.key==="Escape"&&(f=!0,y=null,u())},r.oninput=()=>{r.classList.remove("bad"),o.textContent=""},r.onblur=()=>_(!1),setTimeout(()=>{r.focus();const v=a.lastIndexOf(".");r.setSelectionRange(0,v>0?v:a.length)},0),s}function u(){d.innerHTML="",y&&y.name===void 0&&d.appendChild(S("",a=>n(h.create(a))));for(const a of Object.keys(h.state.files)){if(y?.name===a){d.appendChild(S(a,s=>h.rename(a,s)));continue}const e=document.createElement("div");e.className="file",e.dataset.n=a,e.innerHTML='<span class="nm"></span><span class="acts"><button class="x" data-a="ren" title="重新命名">✎</button><button class="x" data-a="del" title="刪除">✕</button></span>',e.firstChild.textContent=j(a)+" "+a,e.onclick=s=>{const r=s.target.dataset.a;r==="ren"?(y={name:a},u()):r==="del"?confirm(`刪除 ${a}？`)&&h.remove(a):n(a)},e.ondblclick=s=>{s.target.dataset.a||(y={name:a},u())},d.appendChild(e)}z()}const z=()=>d.querySelectorAll(".file[data-n]").forEach(a=>a.classList.toggle("on",i(a.dataset.n)));function x(){p.innerHTML="";const a=_e(),e=Object.keys(a).filter(s=>s!=="").sort();a[""]&&e.push("");for(const s of e){const r=a[s];if(s!==""){const o=document.createElement("div");o.className="ex-folder",o.dataset.dir=s,o.innerHTML=`<span class="ex-f-arrow">▶</span><span>${ge(s)} ${s}/</span>`,o.onclick=()=>{o.classList.toggle("open");const _=o.nextElementSibling;_?.classList.contains("ex-folder-body")&&(_.hidden=!_.hidden)},p.appendChild(o);const f=document.createElement("div");f.className="ex-folder-body",f.hidden=!0;for(const[_,v]of Object.entries(r))f.appendChild(k(_,D(`${s}/${_}`),_));p.appendChild(f)}else for(const[o,f]of Object.entries(r))p.appendChild(k(o,D(o),o))}}function k(a,e,s,r){const o=document.createElement("div");return o.className="ex-file",o.innerHTML=`<span class="nm">${j(a)} ${a}</span><button class="ex-load" title="載入到工作區">載入</button>`,o.querySelector(".ex-load").onclick=f=>{f.stopPropagation(),l(e,s)},o.onclick=f=>{f.target.tagName!=="BUTTON"&&l(e,s)},o}function l(a,e){for(const[s,r]of Object.entries(a))if(s in h.state.files){if(!confirm(`「${s}」已存在，要用範例覆蓋嗎？`))continue;h.setContent(s,r),Z(async()=>{const{modelOf:o}=await import("./files-C0qTJspE.js").then(f=>f.f);return{modelOf:o}},__vite__mapDeps([0,1,2,3,4,5]),import.meta.url).then(({modelOf:o})=>{try{o(s).setValue(r)}catch{}})}else h.create(s,r);h.open(e),n(e)}c.onclick=()=>{w=!w,c.classList.toggle("open",w),p.hidden=!w,w&&x()},t.querySelector(".side-h").onclick=a=>{const e=a.target.dataset.a;e==="new"&&(y={},u()),e==="up"&&g.click()},g.onchange=()=>{m([...g.files]),g.value=""},t.ondragover=a=>{a.preventDefault(),t.classList.add("dropping")},t.ondragleave=()=>t.classList.remove("dropping"),t.ondrop=a=>{a.preventDefault(),t.classList.remove("dropping"),m([...a.dataTransfer.files])};async function m(a){let e;for(const s of a){let r=s.name,o=1;for(;r in h.state.files;)r=s.name.replace(/(\.[^.]*)?$/,` (${o++})$1`);e=h.create(r,await s.text())}e&&n(e)}return h.on(a=>a.type==="open"||a.type==="close"?z():u()),u(),{mark:z,render:u}}function be(t){const n=h.state;t.innerHTML=`
+    <input type="file" multiple hidden>`;const d=t.querySelector(".flist"),c=t.querySelector("#ex-toggle"),p=t.querySelector(".ex-tree"),h=t.querySelector("input[type=file]");let y=null,w=!1;function S(a,n){const s=document.createElement("div");s.className="file editing";const i=document.createElement("input");i.value=a,i.spellcheck=!1;const r=document.createElement("div");r.className="msg",s.append(i,r);let m=!1;const _=v=>{if(m)return;const q=i.value.trim();if(!q||q===a){m=!0,y=null,u();return}const T=y;y=null;try{n(q),m=!0,u()}catch(E){v?(y=T,i.classList.add("bad"),r.textContent=E.message,i.focus()):(m=!0,u())}};return i.onkeydown=v=>{v.key==="Enter"&&_(!0),v.key==="Escape"&&(m=!0,y=null,u())},i.oninput=()=>{i.classList.remove("bad"),r.textContent=""},i.onblur=()=>_(!1),setTimeout(()=>{i.focus();const v=a.lastIndexOf(".");i.setSelectionRange(0,v>0?v:a.length)},0),s}function u(){d.innerHTML="",y&&y.name===void 0&&d.appendChild(S("",a=>e(g.create(a))));for(const a of Object.keys(g.state.files)){if(y?.name===a){d.appendChild(S(a,s=>g.rename(a,s)));continue}const n=document.createElement("div");n.className="file",n.dataset.n=a,n.innerHTML='<span class="nm"></span><span class="acts"><button class="x" data-a="ren" title="重新命名">✎</button><button class="x" data-a="del" title="刪除">✕</button></span>',n.firstChild.textContent=j(a)+" "+a,n.onclick=s=>{const i=s.target.dataset.a;i==="ren"?(y={name:a},u()):i==="del"?confirm(`刪除 ${a}？`)&&g.remove(a):e(a)},n.ondblclick=s=>{s.target.dataset.a||(y={name:a},u())},d.appendChild(n)}C()}const C=()=>d.querySelectorAll(".file[data-n]").forEach(a=>a.classList.toggle("on",o(a.dataset.n)));function x(){p.innerHTML="";const a=_n(),n=Object.keys(a).filter(s=>s!=="").sort();a[""]&&n.push("");for(const s of n){const i=a[s];if(s!==""){const r=document.createElement("div");r.className="ex-folder",r.dataset.dir=s,r.innerHTML=`<span class="ex-f-arrow">▶</span><span>${hn(s)} ${s}/</span>`,r.onclick=()=>{r.classList.toggle("open");const _=r.nextElementSibling;_?.classList.contains("ex-folder-body")&&(_.hidden=!_.hidden)},p.appendChild(r);const m=document.createElement("div");m.className="ex-folder-body",m.hidden=!0;for(const[_,v]of Object.entries(i))m.appendChild(k(_,D(`${s}/${_}`),_));p.appendChild(m)}else for(const[r,m]of Object.entries(i))p.appendChild(k(r,D(r),r))}}function k(a,n,s,i){const r=document.createElement("div");return r.className="ex-file",r.innerHTML=`<span class="nm">${j(a)} ${a}</span><button class="ex-load" title="載入到工作區">載入</button>`,r.querySelector(".ex-load").onclick=m=>{m.stopPropagation(),l(n,s)},r.onclick=m=>{m.target.tagName!=="BUTTON"&&l(n,s)},r}function l(a,n){for(const[s,i]of Object.entries(a))if(s in g.state.files){if(!confirm(`「${s}」已存在，要用範例覆蓋嗎？`))continue;g.setContent(s,i),Z(async()=>{const{modelOf:r}=await import("./files-C0qTJspE.js").then(m=>m.f);return{modelOf:r}},__vite__mapDeps([0,1,2,3,4,5]),import.meta.url).then(({modelOf:r})=>{try{r(s).setValue(i)}catch{}})}else g.create(s,i);g.open(n),e(n)}c.onclick=()=>{w=!w,c.classList.toggle("open",w),p.hidden=!w,w&&x()},t.querySelector(".side-h").onclick=a=>{const n=a.target.dataset.a;n==="new"&&(y={},u()),n==="up"&&h.click()},h.onchange=()=>{f([...h.files]),h.value=""},t.ondragover=a=>{a.preventDefault(),t.classList.add("dropping")},t.ondragleave=()=>t.classList.remove("dropping"),t.ondrop=a=>{a.preventDefault(),t.classList.remove("dropping"),f([...a.dataTransfer.files])};async function f(a){let n;for(const s of a){let i=s.name,r=1;for(;i in g.state.files;)i=s.name.replace(/(\.[^.]*)?$/,` (${r++})$1`);n=g.create(i,await s.text())}n&&e(n)}return g.on(a=>a.type==="open"||a.type==="close"?C():u()),u(),{mark:C,render:u}}function bn(t){const e=g.state;t.innerHTML=`
     <nav class="act"><button class="on" title="檔案總管">📁</button></nav>
     <aside class="side" id="v-side"></aside>
     <section class="v-main">
@@ -1137,13 +1040,13 @@ for p, a in zip(yd_pred[:5], yd_te[:5]):
         <div id="v-term" hidden><pre id="v-log" class="log"></pre><label class="prompt">&gt;&gt;&gt;<input id="v-in" spellcheck="false" autocomplete="off"></label></div>
       </div>
     </section>
-    <footer class="status"><span id="v-st">正在載入 Python…</span><span id="v-pos"></span><span>Python 3 (Pyodide)</span></footer>`;const i=l=>t.querySelector(l),d=i("#v-out"),c=i("#v-log"),p=i("#v-run");Y(i("#v-side"),{onOpen:l=>h.open(l),isActive:l=>l===n.active});const g=B.create(i("#v-ed"),{theme:O(),automaticLayout:!0,fontSize:14,minimap:{enabled:!0},tabSize:4,insertSpaces:!0,scrollBeyondLastLine:!1});function y(){const l=i("#v-tabs");l.innerHTML="";for(const m of n.open){const a=document.createElement("div");a.className="tab"+(m===n.active?" on":""),a.innerHTML='<span></span><button class="x" title="關閉">✕</button>',a.firstChild.textContent=m,a.onclick=()=>h.open(m),a.lastChild.onclick=e=>{e.stopPropagation(),h.close(m)},l.appendChild(a)}}function w(){g.setModel(n.active?I(n.active):null),y()}h.on(w),w(),g.onDidChangeCursorPosition(l=>i("#v-pos").textContent=`行 ${l.position.lineNumber}，欄 ${l.position.column}`);const S=(l,m,a)=>{const e=document.createElement("span");a&&(e.className=a),e.textContent=m,l.appendChild(e),l.scrollTop=l.scrollHeight},u=l=>{t.querySelectorAll(".ptabs [data-p]").forEach(m=>m.classList.toggle("on",m.dataset.p===l)),d.hidden=l!=="out",i("#v-term").hidden=l!=="term"};t.querySelectorAll(".ptabs [data-p]").forEach(l=>l.onclick=()=>u(l.dataset.p)),i("#v-clr").onclick=()=>{d.textContent="",c.textContent=""};async function z(){u("out"),d.textContent="";const l=n.active;if(!l?.endsWith(".py")){S(d,`請先選擇一個 .py 檔案再執行。
-`,"err");return}p.disabled=!0,i("#v-st").textContent="執行中…";const m=performance.now();await ne(n.files[l],l,{out:(a,e)=>S(d,a,e),err:a=>S(d,a,"err")}),i("#v-st").textContent=`完成（${((performance.now()-m)/1e3).toFixed(2)} 秒）`,p.disabled=!1}p.onclick=z,p.disabled=!0,g.addCommand(F.CtrlCmd|A.Enter,z),g.addCommand(A.F5,z);const x=[];let k=0;i("#v-in").onkeydown=async l=>{const m=l.target;if(l.key==="ArrowUp"&&x.length){k=Math.max(0,k-1),m.value=x[k];return}if(l.key==="ArrowDown"){k=Math.min(x.length,k+1),m.value=x[k]??"";return}if(l.key!=="Enter"||!m.value.trim())return;const a=m.value;m.value="",x.push(a),k=x.length,S(c,">>> "+a+`
-`,"dim"),await W(a,{out:(e,s)=>S(c,e,s),err:e=>S(c,e,"err")})},H.then(()=>{p.disabled=!1,i("#v-st").textContent="Python 已就緒"})}const R="py-ide:nb1",V=[{type:"md",src:`# 我的筆記本
+    <footer class="status"><span id="v-st">正在載入 Python…</span><span id="v-pos"></span><span>Python 3 (Pyodide)</span></footer>`;const o=l=>t.querySelector(l),d=o("#v-out"),c=o("#v-log"),p=o("#v-run");Y(o("#v-side"),{onOpen:l=>g.open(l),isActive:l=>l===e.active});const h=N.create(o("#v-ed"),{theme:O(),automaticLayout:!0,fontSize:14,minimap:{enabled:!0},tabSize:4,insertSpaces:!0,scrollBeyondLastLine:!1});function y(){const l=o("#v-tabs");l.innerHTML="";for(const f of e.open){const a=document.createElement("div");a.className="tab"+(f===e.active?" on":""),a.innerHTML='<span></span><button class="x" title="關閉">✕</button>',a.firstChild.textContent=f,a.onclick=()=>g.open(f),a.lastChild.onclick=n=>{n.stopPropagation(),g.close(f)},l.appendChild(a)}}function w(){h.setModel(e.active?H(e.active):null),y()}g.on(w),w(),h.onDidChangeCursorPosition(l=>o("#v-pos").textContent=`行 ${l.position.lineNumber}，欄 ${l.position.column}`);const S=(l,f,a)=>{const n=document.createElement("span");a&&(n.className=a),n.textContent=f,l.appendChild(n),l.scrollTop=l.scrollHeight},u=l=>{t.querySelectorAll(".ptabs [data-p]").forEach(f=>f.classList.toggle("on",f.dataset.p===l)),d.hidden=l!=="out",o("#v-term").hidden=l!=="term"};t.querySelectorAll(".ptabs [data-p]").forEach(l=>l.onclick=()=>u(l.dataset.p)),o("#v-clr").onclick=()=>{d.textContent="",c.textContent=""};async function C(){u("out"),d.textContent="";const l=e.active;if(!l?.endsWith(".py")){S(d,`請先選擇一個 .py 檔案再執行。
+`,"err");return}p.disabled=!0,o("#v-st").textContent="執行中…";const f=performance.now();await en(e.files[l],l,{out:(a,n)=>S(d,a,n),err:a=>S(d,a,"err")}),o("#v-st").textContent=`完成（${((performance.now()-f)/1e3).toFixed(2)} 秒）`,p.disabled=!1}p.onclick=C,p.disabled=!0,h.addCommand(F.CtrlCmd|A.Enter,C),h.addCommand(A.F5,C);const x=[];let k=0;o("#v-in").onkeydown=async l=>{const f=l.target;if(l.key==="ArrowUp"&&x.length){k=Math.max(0,k-1),f.value=x[k];return}if(l.key==="ArrowDown"){k=Math.min(x.length,k+1),f.value=x[k]??"";return}if(l.key!=="Enter"||!f.value.trim())return;const a=f.value;f.value="",x.push(a),k=x.length,S(c,">>> "+a+`
+`,"dim"),await W(a,{out:(n,s)=>S(c,n,s),err:n=>S(c,n,"err")})},X.then(()=>{p.disabled=!1,o("#v-st").textContent="Python 已就緒"})}const I="py-ide:nb1",R=[{type:"md",src:`# 我的筆記本
 雙擊文字儲存格可編輯。**Shift+Enter** 執行並跳到下一格，變數會在儲存格之間保留。`},{type:"code",src:`import math
 x = 10
 math.sqrt(x)`},{type:"code",src:`# 最後一行的值會自動顯示
-x * 2`}],ye=t=>t.replace(/[&<>]/g,n=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[n]);function xe(t){return ye(t).replace(/```\w*\n([\s\S]*?)```/g,"<pre>$1</pre>").replace(/^(#{1,4}) (.+)$/gm,(i,d,c)=>`<h${d.length}>${c}</h${d.length}>`).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/`([^`\n]+)`/g,"<code>$1</code>").replace(/^[-*] (.+)$/gm,"<li>$1</li>").replace(/(<li>.*<\/li>\n?)+/g,i=>`<ul>${i}</ul>`).split(/\n{2,}/).map(i=>/^<(h\d|ul|pre)/.test(i)?i:`<p>${i.replace(/\n/g,"<br>")}</p>`).join("")}function ve(t){let n;try{n=JSON.parse(localStorage.getItem(R))||V}catch{n=V}let i=0,d=[],c=Promise.resolve();const p=()=>localStorage.setItem(R,JSON.stringify(n.map(({type:e,src:s})=>({type:e,src:s}))));t.innerHTML=`
+x * 2`}],yn=t=>t.replace(/[&<>]/g,e=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[e]);function xn(t){return yn(t).replace(/```\w*\n([\s\S]*?)```/g,"<pre>$1</pre>").replace(/^(#{1,4}) (.+)$/gm,(o,d,c)=>`<h${d.length}>${c}</h${d.length}>`).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/`([^`\n]+)`/g,"<code>$1</code>").replace(/^[-*] (.+)$/gm,"<li>$1</li>").replace(/(<li>.*<\/li>\n?)+/g,o=>`<ul>${o}</ul>`).split(/\n{2,}/).map(o=>/^<(h\d|ul|pre)/.test(o)?o:`<p>${o.replace(/\n/g,"<br>")}</p>`).join("")}function vn(t){let e;try{e=JSON.parse(localStorage.getItem(I))||R}catch{e=R}let o=0,d=[],c=Promise.resolve();const p=()=>localStorage.setItem(I,JSON.stringify(e.map(({type:n,src:s})=>({type:n,src:s}))));t.innerHTML=`
     <aside class="side" id="n-side"></aside><div class="nb-main">
     <div class="nb-bar">
       <button data-a="code">＋ 程式碼</button><button data-a="md">＋ 文字</button>
@@ -1152,7 +1055,7 @@ x * 2`}],ye=t=>t.replace(/[&<>]/g,n=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[n]);f
       <span id="n-st" class="dim">正在連線至 Python…</span>
     </div>
     <div id="n-cells"></div></div>
-    <section class="nb-file" hidden><div class="fh"><span class="fn"></span><span class="dim">貼上或輸入內容會自動儲存</span><button class="fx" title="關閉">✕</button></div><div class="fed"></div></section>`;const g=t.querySelector("#n-cells"),y=t.querySelector("#n-st"),w=e=>g.children[n.indexOf(e)],S=(e,s,r)=>{const o=document.createElement("span");r&&(o.className=r),o.textContent=s,e.querySelector(".co").appendChild(o)};function u(){d.forEach(e=>e.dispose()),d=[],g.innerHTML="",n.forEach((e,s)=>{const r=document.createElement("div");r.className="cell "+e.type,r.innerHTML=`<div class="gut"><button class="go" title="執行 (Ctrl+Enter)">▶</button><small class="cnt">${e.count?`[${e.count}]`:""}</small></div>
+    <section class="nb-file" hidden><div class="fh"><span class="fn"></span><span class="dim">貼上或輸入內容會自動儲存</span><button class="fx" title="關閉">✕</button></div><div class="fed"></div></section>`;const h=t.querySelector("#n-cells"),y=t.querySelector("#n-st"),w=n=>h.children[e.indexOf(n)],S=(n,s,i)=>{const r=document.createElement("span");i&&(r.className=i),r.textContent=s,n.querySelector(".co").appendChild(r)};function u(){d.forEach(n=>n.dispose()),d=[],h.innerHTML="",e.forEach((n,s)=>{const i=document.createElement("div");i.className="cell "+n.type,i.innerHTML=`<div class="gut"><button class="go" title="執行 (Ctrl+Enter)">▶</button><small class="cnt">${n.count?`[${n.count}]`:""}</small></div>
         <div class="body"><div class="tools"><button data-a="up">↑</button><button data-a="down">↓</button>
-        <button data-a="type">${e.type==="code"?"轉成文字":"轉成程式碼"}</button><button data-a="del">刪除</button></div>
-        <div class="ed"></div><div class="mdv"></div><pre class="co log"></pre></div>`,g.appendChild(r);const o=r.querySelector(".ed"),f=r.querySelector(".mdv"),_=B.create(o,{value:e.src,language:e.type==="code"?"python":"markdown",theme:O(),minimap:{enabled:!1},lineNumbers:"off",glyphMargin:!1,folding:!1,lineDecorationsWidth:8,scrollBeyondLastLine:!1,renderLineHighlight:"none",overviewRulerLanes:0,hideCursorInOverviewRuler:!0,wordWrap:"on",scrollbar:{vertical:"hidden",alwaysConsumeMouseWheel:!1},fontSize:14,tabSize:4}),v=()=>{o.style.height=Math.max(44,_.getContentHeight())+"px",_.layout()};_.onDidContentSizeChange(v),v(),_.onDidChangeModelContent(()=>{e.src=_.getValue(),p()}),_.addCommand(F.CtrlCmd|A.Enter,()=>z(e)),_.addCommand(F.Shift|A.Enter,async()=>{await z(e);const q=n.indexOf(e);q===n.length-1&&(n.push({type:"code",src:""}),p(),u()),d[q+1]?.focus()}),d.push(_);const C=e.type==="md"&&!e.editing;o.hidden=C,f.hidden=!C,C&&(f.innerHTML=e.src.trim()?xe(e.src):'<p class="dim">（空白文字儲存格，雙擊編輯）</p>',f.ondblclick=()=>{e.editing=!0,u(),d[n.indexOf(e)].focus()}),(e.log||[]).forEach(([q,T])=>S(r,q,T)),r.querySelector(".go").onclick=()=>z(e),r.querySelector(".tools").onclick=q=>{const T=q.target.dataset.a;if(!T)return;const L=n.indexOf(e);T==="del"&&n.splice(L,1),T==="up"&&L>0&&([n[L-1],n[L]]=[n[L],n[L-1]]),T==="down"&&L<n.length-1&&([n[L+1],n[L]]=[n[L],n[L+1]]),T==="type"&&(e.type=e.type==="code"?"md":"code",e.editing=!1,e.log=[]),p(),u()}})}function z(e){return e.type==="md"?(e.editing=!1,u(),Promise.resolve()):c=c.then(async()=>{const s=w(e);if(!s)return;e.log=[],s.querySelector(".co").textContent="",s.classList.add("busy"),s.querySelector(".cnt").textContent="[*]";const r=(f,_)=>{e.log.push([f,_]);const v=w(e);v&&S(v,f,_)};await W(e.src,{out:r,err:f=>r(f,"err")}),e.count=++i;const o=w(e);o&&(o.classList.remove("busy"),o.querySelector(".cnt").textContent=`[${e.count}]`)})}t.querySelector(".nb-bar").onclick=async e=>{const s=e.target.dataset.a;if(s){if((s==="code"||s==="md")&&(n.push({type:s,src:""}),p(),u(),d.at(-1).focus()),s==="all")for(const r of n.slice())await z(r);if(s==="restart"&&(K(),i=0,n.forEach(r=>{r.count=0,r.log=[]}),u()),s==="clear"&&(n.forEach(r=>r.log=[]),u()),s==="ipynb"){const r={cells:n.map(f=>({cell_type:f.type==="code"?"code":"markdown",metadata:{},source:f.src.split(/(?<=\n)/),...f.type==="code"?{outputs:[],execution_count:null}:{}})),metadata:{kernelspec:{name:"python3",display_name:"Python 3",language:"python"},language_info:{name:"python"}},nbformat:4,nbformat_minor:4},o=document.createElement("a");o.href=URL.createObjectURL(new Blob([JSON.stringify(r,null,1)],{type:"application/json"})),o.download="notebook.ipynb",o.click(),URL.revokeObjectURL(o.href)}}};const x=t.querySelector(".nb-file");let k=null,l=null;const m=Y(t.querySelector("#n-side"),{onOpen:a,isActive:e=>e===l});function a(e){l=e,x.hidden=!1,x.querySelector(".fn").textContent=e,k??=B.create(x.querySelector(".fed"),{theme:O(),automaticLayout:!0,minimap:{enabled:!1},fontSize:14,scrollBeyondLastLine:!1,tabSize:4}),k.setModel(I(e)),m.mark()}x.querySelector(".fx").onclick=()=>{l=null,x.hidden=!0,m.mark()},h.on(e=>{e.name===l&&(e.type==="remove"&&(l=null,x.hidden=!0,m.mark()),e.type==="rename"&&a(e.to))}),u(),H.then(()=>y.textContent="已連線 · Python 3 (Pyodide)")}const P=document.documentElement;be(document.getElementById("vsc"));ve(document.getElementById("nb"));function Q(t){P.dataset.mode=t,localStorage.setItem("py-ide:mode",t),document.querySelectorAll(".seg button").forEach(n=>n.classList.toggle("on",n.dataset.m===t))}document.querySelectorAll(".seg button").forEach(t=>t.onclick=()=>Q(t.dataset.m));Q(localStorage.getItem("py-ide:mode")||"vscode");P.dataset.theme=localStorage.getItem("py-ide:theme")||"dark";B.setTheme(O());document.getElementById("theme").onclick=()=>{P.dataset.theme=P.dataset.theme==="light"?"dark":"light",localStorage.setItem("py-ide:theme",P.dataset.theme),B.setTheme(O())};
+        <button data-a="type">${n.type==="code"?"轉成文字":"轉成程式碼"}</button><button data-a="del">刪除</button></div>
+        <div class="ed"></div><div class="mdv"></div><pre class="co log"></pre></div>`,h.appendChild(i);const r=i.querySelector(".ed"),m=i.querySelector(".mdv"),_=N.create(r,{value:n.src,language:n.type==="code"?"python":"markdown",theme:O(),minimap:{enabled:!1},lineNumbers:"off",glyphMargin:!1,folding:!1,lineDecorationsWidth:8,scrollBeyondLastLine:!1,renderLineHighlight:"none",overviewRulerLanes:0,hideCursorInOverviewRuler:!0,wordWrap:"on",scrollbar:{vertical:"hidden",alwaysConsumeMouseWheel:!1},fontSize:14,tabSize:4}),v=()=>{r.style.height=Math.max(44,_.getContentHeight())+"px",_.layout()};_.onDidContentSizeChange(v),v(),_.onDidChangeModelContent(()=>{n.src=_.getValue(),p()}),_.addCommand(F.CtrlCmd|A.Enter,()=>C(n)),_.addCommand(F.Shift|A.Enter,async()=>{await C(n);const T=e.indexOf(n);T===e.length-1&&(e.push({type:"code",src:""}),p(),u()),d[T+1]?.focus()}),d.push(_);const q=n.type==="md"&&!n.editing;r.hidden=q,m.hidden=!q,q&&(m.innerHTML=n.src.trim()?xn(n.src):'<p class="dim">（空白文字儲存格，雙擊編輯）</p>',m.ondblclick=()=>{n.editing=!0,u(),d[e.indexOf(n)].focus()}),(n.log||[]).forEach(([T,E])=>S(i,T,E)),i.querySelector(".go").onclick=()=>C(n),i.querySelector(".tools").onclick=T=>{const E=T.target.dataset.a;if(!E)return;const L=e.indexOf(n);E==="del"&&e.splice(L,1),E==="up"&&L>0&&([e[L-1],e[L]]=[e[L],e[L-1]]),E==="down"&&L<e.length-1&&([e[L+1],e[L]]=[e[L],e[L+1]]),E==="type"&&(n.type=n.type==="code"?"md":"code",n.editing=!1,n.log=[]),p(),u()}})}function C(n){return n.type==="md"?(n.editing=!1,u(),Promise.resolve()):c=c.then(async()=>{const s=w(n);if(!s)return;n.log=[],s.querySelector(".co").textContent="",s.classList.add("busy"),s.querySelector(".cnt").textContent="[*]";const i=(m,_)=>{n.log.push([m,_]);const v=w(n);v&&S(v,m,_)};await W(n.src,{out:i,err:m=>i(m,"err")}),n.count=++o;const r=w(n);r&&(r.classList.remove("busy"),r.querySelector(".cnt").textContent=`[${n.count}]`)})}t.querySelector(".nb-bar").onclick=async n=>{const s=n.target.dataset.a;if(s){if((s==="code"||s==="md")&&(e.push({type:s,src:""}),p(),u(),d.at(-1).focus()),s==="all")for(const i of e.slice())await C(i);if(s==="restart"&&(K(),o=0,e.forEach(i=>{i.count=0,i.log=[]}),u()),s==="clear"&&(e.forEach(i=>i.log=[]),u()),s==="ipynb"){const i={cells:e.map(m=>({cell_type:m.type==="code"?"code":"markdown",metadata:{},source:m.src.split(/(?<=\n)/),...m.type==="code"?{outputs:[],execution_count:null}:{}})),metadata:{kernelspec:{name:"python3",display_name:"Python 3",language:"python"},language_info:{name:"python"}},nbformat:4,nbformat_minor:4},r=document.createElement("a");r.href=URL.createObjectURL(new Blob([JSON.stringify(i,null,1)],{type:"application/json"})),r.download="notebook.ipynb",r.click(),URL.revokeObjectURL(r.href)}}};const x=t.querySelector(".nb-file");let k=null,l=null;const f=Y(t.querySelector("#n-side"),{onOpen:a,isActive:n=>n===l});function a(n){l=n,x.hidden=!1,x.querySelector(".fn").textContent=n,k??=N.create(x.querySelector(".fed"),{theme:O(),automaticLayout:!0,minimap:{enabled:!1},fontSize:14,scrollBeyondLastLine:!1,tabSize:4}),k.setModel(H(n)),f.mark()}x.querySelector(".fx").onclick=()=>{l=null,x.hidden=!0,f.mark()},g.on(n=>{n.name===l&&(n.type==="remove"&&(l=null,x.hidden=!0,f.mark()),n.type==="rename"&&a(n.to))}),u(),X.then(()=>y.textContent="已連線 · Python 3 (Pyodide)")}const P=document.documentElement;bn(document.getElementById("vsc"));vn(document.getElementById("nb"));function Q(t){P.dataset.mode=t,localStorage.setItem("py-ide:mode",t),document.querySelectorAll(".seg button").forEach(e=>e.classList.toggle("on",e.dataset.m===t))}document.querySelectorAll(".seg button").forEach(t=>t.onclick=()=>Q(t.dataset.m));Q(localStorage.getItem("py-ide:mode")||"vscode");P.dataset.theme=localStorage.getItem("py-ide:theme")||"dark";N.setTheme(O());document.getElementById("theme").onclick=()=>{P.dataset.theme=P.dataset.theme==="light"?"dark":"light",localStorage.setItem("py-ide:theme",P.dataset.theme),N.setTheme(O())};

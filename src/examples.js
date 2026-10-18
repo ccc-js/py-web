@@ -11,8 +11,7 @@ export const EXAMPLE_FILES = Object.fromEntries(
 // 有相依檔案的範例，載入入口時一併建立所需的模組與資料檔。
 const EXAMPLE_BUNDLES = {
   'ai/microgpt.py': ['ai/microgpt.py', 'ai/input.txt'],
-  'nn/nn-gpt.py': ['nn/nn-gpt.py', 'nn/nn.py', 'ai/input.txt'],
-  'nn-numpy/nn-gpt.py': ['nn-numpy/nn-gpt.py', 'nn-numpy/nn.py', 'ai/input.txt'],
+  'nn-numpy/nn-gpt.py': ['nn-numpy/nn-gpt.py', 'nn-numpy/nn.py', 'nn-numpy/input.txt'],
 };
 
 export function filesForExample(path) {
@@ -42,7 +41,6 @@ export function buildTree() {
 // 各分類的圖示對照（不在表內則用 📁）
 const DIR_ICONS = {
   ai:         '🤖',
-  nn:         '🧠',
   'nn-numpy': '⚡',
   numpy:      '🔢',
   pandas:     '🐼',
