@@ -3,7 +3,7 @@ import numpy as np
 
 # Create arrays
 a = np.array([1, 2, 3, 4, 5], dtype=float)
-b = np.linspace(0, 1, 6)
+b = np.linspace(0, 1, 5)
 print("a =", a)
 print("b =", b)
 

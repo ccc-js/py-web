@@ -50,7 +50,7 @@ ax.legend(); ax.grid(alpha=0.4)
 
 plt.tight_layout()
 
-# ── PNG → base64 → inject into output panel ──────
+# ── PNG → base64 → 在浮現視窗顯示 ──────────────────
 buf = io.BytesIO()
 plt.savefig(buf, format='png', dpi=110, bbox_inches='tight',
             facecolor=fig.get_facecolor())
@@ -58,15 +58,63 @@ plt.close()
 buf.seek(0)
 
 img_b64 = base64.b64encode(buf.read()).decode()
+# 重複執行時，取代前一張圖表而非疊加視窗。
+old = document.getElementById('matplotlib-chart-window')
+if old:
+    old.remove()
+
+modal = document.createElement('div')
+modal.id = 'matplotlib-chart-window'
+modal.setAttribute('role', 'dialog')
+modal.setAttribute('aria-modal', 'true')
+modal.setAttribute('aria-label', 'Matplotlib 圖表')
+modal.style.cssText = (
+    'position:fixed; inset:0; z-index:10000; display:flex; '
+    'align-items:center; justify-content:center; padding:24px; '
+    'box-sizing:border-box; background:rgba(0, 0, 0, .62);'
+)
+
+panel = document.createElement('div')
+panel.style.cssText = (
+    'position:relative; width:min(1100px, 100%); max-height:100%; '
+    'overflow:auto; box-sizing:border-box; padding:42px 16px 16px; '
+    'border:1px solid #555; border-radius:8px; background:#1e1e1e; '
+    'box-shadow:0 16px 48px rgba(0, 0, 0, .55);'
+)
+
 img = document.createElement('img')
 img.src = f'data:image/png;base64,{img_b64}'
-img.style.maxWidth = '100%'
-img.style.display = 'block'
-img.style.margin = '8px 0'
-img.style.borderRadius = '4px'
+img.alt = 'Matplotlib Demo: Line, Histogram, Scatter'
+img.style.cssText = 'display:block; width:100%; height:auto; border-radius:4px;'
 
-out = document.getElementById('v-out') or document.querySelector('.co')
-if out:
-    out.appendChild(img)
+close_btn = document.createElement('button')
+close_btn.textContent = '✕ 關閉'
+close_btn.setAttribute('aria-label', '關閉圖表')
+close_btn.style.cssText = (
+    'position:absolute; top:10px; right:12px; border:1px solid #666; '
+    'border-radius:4px; padding:5px 9px; color:#ddd; background:#333; '
+    'cursor:pointer; font:inherit;'
+)
 
-print('Chart rendered above.')
+def close_chart(event=None):
+    modal.remove()
+    document.onkeydown = None
+
+def close_on_backdrop(event):
+    if event.target.id == 'matplotlib-chart-window':
+        close_chart()
+
+def close_on_escape(event):
+    if event.key == 'Escape':
+        close_chart()
+
+close_btn.onclick = close_chart
+modal.onclick = close_on_backdrop
+document.onkeydown = close_on_escape
+panel.appendChild(close_btn)
+panel.appendChild(img)
+modal.appendChild(panel)
+document.body.appendChild(modal)
+close_btn.focus()
+
+print('圖表已在浮現視窗中開啟。')

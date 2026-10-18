@@ -1,5 +1,5 @@
 import { store } from './files.js';
-import { buildTree, dirIcon } from './examples.js';
+import { buildTree, dirIcon, filesForExample } from './examples.js';
 
 const icon = (n) => (n.endsWith('.py') ? '🐍' : '📄');
 
@@ -100,13 +100,13 @@ export function mountExplorer(el, { onOpen, isActive }) {
         body.className = 'ex-folder-body';
         body.hidden = true;
         for (const [name, content] of Object.entries(files)) {
-          body.appendChild(makeFileRow(name, { [name]: content }, name, dir));
+          body.appendChild(makeFileRow(name, filesForExample(`${dir}/${name}`), name, dir));
         }
         exTree.appendChild(body);
       } else {
         // 頂層散落檔案
         for (const [name, content] of Object.entries(files)) {
-          exTree.appendChild(makeFileRow(name, { [name]: content }, name, ''));
+          exTree.appendChild(makeFileRow(name, filesForExample(name), name, ''));
         }
       }
     }
