@@ -98,3 +98,38 @@ button:disabled { opacity:.5; cursor:wait; }
 .nb-file .fn { font-weight:600; } .nb-file .fh .dim { margin-left:auto; font-size:12px; }
 .nb-file .fh button { border:0; }
 .fed { flex:1; min-height:0; }
+
+/* ---- 範例庫（側欄底部） ---- */
+.ex-section { border-top:2px solid var(--line); flex:none; }
+.ex-hdr {
+  display:flex; align-items:center; gap:7px;
+  padding:7px 10px; cursor:pointer;
+  font-size:12px; font-weight:600; color:var(--dim);
+  letter-spacing:.04em; text-transform:uppercase;
+  user-select:none;
+}
+.ex-hdr:hover { color:var(--fg); background:var(--sel); }
+.ex-arrow { font-size:10px; transition:transform .18s; display:inline-block; }
+.ex-hdr.open .ex-arrow { transform:rotate(90deg); }
+.ex-tree { max-height:40vh; overflow-y:auto; }
+.ex-folder {
+  display:flex; align-items:center; gap:5px;
+  padding:4px 10px; cursor:pointer; font-size:12px;
+  color:var(--dim); user-select:none;
+}
+.ex-folder:hover { background:var(--sel); color:var(--fg); }
+.ex-f-arrow { font-size:9px; transition:transform .18s; display:inline-block; }
+.ex-folder.open .ex-f-arrow { transform:rotate(90deg); }
+.ex-folder-body { padding-left:14px; }
+.ex-file {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:3px 10px 3px 14px; cursor:pointer; font-size:12px;
+}
+.ex-file:hover { background:var(--sel); }
+.ex-file .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; }
+.ex-load {
+  flex:none; font-size:11px; padding:1px 8px; margin-left:4px;
+  background:var(--accent); color:#111; border-color:var(--accent); font-weight:600;
+  visibility:hidden;
+}
+.ex-file:hover .ex-load { visibility:visible; }
