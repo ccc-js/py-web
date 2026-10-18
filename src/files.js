@@ -1,5 +1,7 @@
 // 共用檔案庫：VS Code 模式與 Colab 模式共用，也是 Python open() 讀得到的檔案
 import { monaco } from './monaco.js';
+import microgpt from './examples/microgpt.py?raw';
+import microgptData from './examples/input.txt?raw';
 
 const KEY = 'py-ide:v2';
 const DEF = { active: 'main.py', open: ['main.py', 'utils.py'], files: {
@@ -11,6 +13,17 @@ let st;
 try { st = JSON.parse(localStorage.getItem(KEY)) || DEF; } catch { st = DEF; }
 st.open = (st.open || []).filter((n) => n in st.files);
 if (!(st.active in st.files)) st.active = st.open[0] ?? Object.keys(st.files)[0] ?? null;
+
+// 內建範例：第一次載入時加進側欄（已存在同名檔案則不覆蓋），之後刪掉也不會再出現
+st.seeded ??= [];
+if (!st.seeded.includes('microgpt')) {
+  st.seeded.push('microgpt');
+  st.files['microgpt.py'] ??= microgpt;
+  st.files['input.txt'] ??= microgptData;
+  if (!st.open.includes('microgpt.py')) st.open.push('microgpt.py');
+  st.active = 'microgpt.py';
+  localStorage.setItem(KEY, JSON.stringify(st));
+}
 
 const subs = new Set();
 const models = {};

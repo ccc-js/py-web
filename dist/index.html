@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant" data-mode="vscode" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python IDE</title>
+  <script type="module" crossorigin src="./assets/index-DC0saVeD.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-Ct5FWWRu.js">
+  <link rel="modulepreload" crossorigin href="./assets/editor.api-CnbN0qFN.js">
+  <link rel="modulepreload" crossorigin href="./assets/monaco.contribution-DrSI8YIy.js">
+  <link rel="modulepreload" crossorigin href="./assets/core-qH_pqHwH-C9_6Qe8-.js">
+  <link rel="stylesheet" crossorigin href="./assets/editor-CP2cXDiA.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-1DRL-70a.css">
+</head>
+<body>
+  <header class="top">
+    <strong>Python IDE</strong>
+    <div class="seg" role="tablist" aria-label="模式">
+      <button data-m="vscode">VS Code 模式</button>
+      <button data-m="colab">Colab 模式</button>
+    </div>
+    <button id="theme">切換主題</button>
+  </header>
+  <div id="vsc"></div>
+  <div id="nb"></div>
+  <!-- 觸發 PyScript 啟動 Pyodide；實際執行由 src/runtime.js 控制 -->
+  <script type="py">pass</script>
+</body>
+</html>

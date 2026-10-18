@@ -1,4 +1,6 @@
-# py-web: Python IDE（Monaco + PyScript）
+# Python IDE（Monaco + PyScript）
+
+線上版 -- 
 
 純前端，無需後端。
 
