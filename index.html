@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant" data-mode="vscode" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python IDE</title>
+</head>
+<body>
+  <header class="top">
+    <strong>Python IDE</strong>
+    <div class="seg" role="tablist" aria-label="模式">
+      <button data-m="vscode">VS Code 模式</button>
+      <button data-m="colab">Colab 模式</button>
+    </div>
+    <button id="theme">切換主題</button>
+  </header>
+  <div id="vsc"></div>
+  <div id="nb"></div>
+  <!-- 觸發 PyScript 啟動 Pyodide；實際執行由 src/runtime.js 控制 -->
+  <script type="py">pass</script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
