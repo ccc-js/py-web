@@ -1,6 +1,6 @@
 # Python IDE（Monaco + PyScript）
 
-線上版 -- 
+線上版 -- https://ccc-js.github.io/py-web/dist/index.html
 
 純前端，無需後端。
 
